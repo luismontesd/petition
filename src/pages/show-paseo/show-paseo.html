@@ -1,0 +1,32 @@
+
+<ion-header>
+
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Ver paseo</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+      
+  <ion-content>
+
+                <div id="map">
+                    </div>
+      
+                    <ion-card-content>
+                        <ion-card-title>
+                          {{paseo.nombre_paseador}} {{paseo.apellido_paseador}}
+                        </ion-card-title>
+                        <p>
+                          El será el paseador de tu perro, en unos momentos se dirigira a tu localización para recojer a <b>{{paseo.dog_id}}</b>
+                        </p>
+                      </ion-card-content>
+                  
+         
+      
+      
+      </ion-content>

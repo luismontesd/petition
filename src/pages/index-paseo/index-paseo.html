@@ -1,0 +1,25 @@
+
+<ion-header>
+
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Ver paseos</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+      <ion-list>
+          <ion-item *ngFor="let paseo of paseoList$ | async" detail-push navPush="ShowPaseoPage" [navParams]="{paseo: paseo}">
+            <h3>{{paseo.dog_id}}</h3>
+            <p>{{paseo.status}}</p>
+          </ion-item>
+        </ion-list>
+  
+    
+  </ion-content>
+  

@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Añade tu información</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label fixed>Nombre</ion-label>
+        <ion-input type="text"  name="nombre" [(ngModel)]="profile.nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Apellido</ion-label>
+        <ion-input type="text"  name="apellido" [(ngModel)]="profile.apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label fixed>Telefono</ion-label>
+          <ion-input type="number" name="telefono" [(ngModel)]="profile.telefono"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label fixed>Dirección</ion-label>
+          <ion-input type="text"  name="direccion" [(ngModel)]="profile.direccion"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+            <ion-label>Sexo</ion-label>
+            <ion-select [(ngModel)]="profile.sexo">
+              <ion-option value="Mujer">Mujer</ion-option>
+              <ion-option value="Hombre">Hombre</ion-option>
+            </ion-select>
+        </ion-item>
+      
+
+      <ion-item>
+        <ion-label>Fecha de nacimiento</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="profile.fecha"></ion-datetime>
+      </ion-item>
+      <ion-input hidden [(ngModel)]="profile.latitude"></ion-input>
+      <ion-input hidden [(ngModel)]="profile.longitude"></ion-input>
+      <div padding>
+          <button ion-button color="primary" block (click)="addProfile(profile)">Registrate</button>
+        </div>
+
+</ion-content>

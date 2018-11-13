@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>
+        Seleciona tu perro
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+
+
+  <ion-content padding>
+  <ion-item>
+    <ion-label>Seleccionar perro</ion-label>
+    <ion-select [(ngModel)]="paseo.dog_id">
+      
+      <ion-option *ngFor="let dog of dogList$ | async" value="{{dog.nombre}}">{{dog.nombre}}</ion-option> 
+      
+    </ion-select>
+    
+  </ion-item>
+ 
+  
+  <button ion-button block (click)="addPaseo(paseo)">Solicitar paseo</button>
+  
+</ion-content>

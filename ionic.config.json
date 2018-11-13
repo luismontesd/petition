@@ -1,0 +1,7 @@
+{
+  "name": "4dog",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,94 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{dog?.nombre}}</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="dog.nombre"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Edad</ion-label>
+      <ion-input type="number" [(ngModel)]="dog.edad"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select [(ngModel)]="dog.sexo">
+        <ion-option value="Macho">Macho</ion-option>
+        <ion-option value="Hembra">Hembra</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Temperamento</ion-label>
+      <ion-select [(ngModel)]="dog.temperamento">
+        <ion-option value="Pasivo">Pasivo</ion-option>
+        <ion-option value="Activo">Activo</ion-option>
+        <ion-option value="Hiperactivo">Hiperactivo</ion-option>
+        <ion-option value="Agresivo">Agresivo</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Tamaño</ion-label>
+      <ion-select [(ngModel)]="dog.tamano">
+        <ion-option value="Mini">Mini 0-3 Kg</ion-option>
+        <ion-option value="Pequeño">Pequeño 4-10 Kg</ion-option>
+        <ion-option value="Mediano">Mediano 11-20 Kg</ion-option>
+        <ion-option value="Grande">Grande 21-35 Kg</ion-option>
+        <ion-option value="Gigante">Gigante 36Kg +</ion-option>
+  
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>¿Convive con otros perros?</ion-label>
+      <ion-select [(ngModel)]="dog.convive">
+        <ion-option value="Si">Si</ion-option>
+        <ion-option value="No">No</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>¿Se Sienta?</ion-label>
+      <ion-select [(ngModel)]="dog.seSienta">
+        <ion-option value="Si">Si</ion-option>
+        <ion-option value="No">No</ion-option>
+      </ion-select>
+    </ion-item>
+  
+  
+    <ion-item>
+      <ion-label>¿Hace caso?</ion-label>
+      <ion-select [(ngModel)]="dog.haceCaso">
+        <ion-option value="Si">Si</ion-option>
+        <ion-option value="No">No</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>¿Camina Junto?</ion-label>
+      <ion-select [(ngModel)]="dog.caminaJunto">
+        <ion-option value="Si">Si</ion-option>
+        <ion-option value="No">No</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label>Comentarios</ion-label>
+      <ion-textarea placeholder="Comentarios" [(ngModel)]="dog.comentarios"></ion-textarea>
+    </ion-item>
+  
+    <button ion-button block (click)="saveDog(dog)">Guardar</button>
+    <button ion-button block color="danger" (click)="removeDog(dog)">Eliminar</button>
+  
+    </ion-content>
+  
